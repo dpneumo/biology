@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+  <body>
+    <div class="wrapper">
+      {% include header.html %}
+      {% include content.html %}
+      {% include footer.html %}
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    {% include google_analytics.html %}
+  </body>
+</html>
