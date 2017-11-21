@@ -1,0 +1,44 @@
+---
+---
+
+@import "jekyll-theme-minimal";
+
+body {
+  background-color: #eee;
+  padding:10px;
+}
+
+header {
+  width: 91%;
+  padding-top: 54px;
+  background-color: #f44;
+  color: #222;
+}
+
+section {
+  width:500px;
+  padding-bottom:10px;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.description {
+  color: black;
+  background-color: #ada;
+  width: 25%;
+}
+
+.center {
+  padding: 15px 5px 5px 5px;
+  border: 3px solid green;
+  text-align: center;
+}
+
+.wrapper {
+  width:860px;
+  margin:0;
+}
+
+
