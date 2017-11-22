@@ -17,7 +17,7 @@ title: Biology FYI
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site hopes to provide usefull and entertaining information about UTA biology.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/biology" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  dpneumo
