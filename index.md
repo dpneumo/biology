@@ -4,3 +4,15 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
+
+![soybeans] ![bacteria] ![fungi]
+
+
+### Welcome to Biology FYI!
+
+{{ site.description }}
+
+[grasslands]:images/texas_grasslands.jpg
+[soybeans]:images/soybeans.jpg
+[bacteria]:images/bacteria.jpg
+[fungi]:images/fungi.jpg

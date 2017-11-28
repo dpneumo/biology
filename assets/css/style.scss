@@ -16,12 +16,16 @@ header {
 }
 
 section {
-  width:500px;
+  width:100%;
   padding-bottom:10px;
 }
 
 .navbar {
   width: 100%;
+}
+
+.navbar-custom {
+  background-color: black;
 }
 
 .description {
