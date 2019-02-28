@@ -23,10 +23,27 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
+  - jekyll-picture-tag
 permalink: pretty
 
 repository: dpneumo/dpneumo.github.io
 github: [metadata]
+
+picture:
+  source: "assets/imgs/_fullsize"
+  output: "generated"
+  markup: "picture"
+  presets:
+    default:
+      ppi: [1, 1.5]
+      source_medium:
+        media: "(min-width: 40em)"
+        width: "600"
+        height: "300"
+      source_default:
+        width: "300"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

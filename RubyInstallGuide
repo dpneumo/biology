@@ -1,0 +1,34 @@
+Install Ruby (2.4.2-2):
+  https://rubyinstaller.org/downloads
+  http://www.msys2.org/
+    Choose the appropriate installer for the ruby installed
+      http://repo.msys2.org/distrib/i686/msys2-i686-20161025.exe
+      http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20161025.exe
+
+Then used this as primary guide to get the curb gem installed:
+  https://roscopeco.com/2017/04/25/building-curb-on-windows/
+
+Since am using msys2 remove dk and any other compilers that can be reached via your PATH leaving only the msys2 compiler. "It’s very important that you don’t have any other mingw/msys/cygwin compilers in your path, and that you do this in a windows terminal, not msys/cygwin sh. Otherwise, you’ll probably just build another incompatible library."
+
+Get the curl source code (substitute the curl version you want):
+  https://curl.haxx.se/download/curl-7.54.0.tar.gz
+  extract to: C:\curl-7.54.0
+
+Compile Curl:
+  cd C:\curl-7.54.0\curl-7.54.0
+  sh configure --with-winssl
+  make
+  make install
+
+  Note:
+    My first pass at configure yielded c/o missing 'ar' and an 'acceptable c compiler'.
+    So added these to PATH to make it work:
+      C:\msys32\mingw32\bin
+      C:\msys32\usr\bin
+
+libcurl-4.dll is now in C:\curl-7.54.0\curl-7.54.0\lib\.libs.
+  This differs from roscopeco's instructions.
+
+cd c:\path-to-your-ruby-devkit\lib\.libs
+copy libcurl-4.dll libcurl.dll
+gem install curb -- --with-curl-lib=c:\curl-7.54.0\curl-7.54.0\lib\.libs --with-curl-include=C:\msys32\usr\include\curl
